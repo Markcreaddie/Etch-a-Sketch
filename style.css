@@ -9,31 +9,56 @@ h1{
     margin: 0;
     padding: 0;
 }
+
+h2{
+    margin: 0;
+    padding: 0;
+}
+
 button{
-    font-size: 16px;
-    padding: 16px;
+    font-size: 12px;
+    padding: 8px;
     background-color:antiquewhite;;
     margin: 0;
+    width: 120px;
 }
 
 body{
     display: flex;
     flex: none;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
-    gap: 24px;
+    gap: 160px;
 }
+
+.legend{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 75vh;
+    align-items: center;
+    margin: 0;
+}
+.pens{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 .grid{
     background-color: antiquewhite;
     display: flex;
     flex: none;
-    justify-content:space-between;
+    justify-content:center;
     padding: 32px;
-    width:60vh;
-    height: 60vh;
+    width:75vh;
+    height: 75vh;
+}
+.response{
+    display: flex;
+    align-self: center;
 }
 .column{
     display: flex;
@@ -51,3 +76,6 @@ body{
     background-color: black;
 }
 
+.copyright{
+    margin: 0;
+}
