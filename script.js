@@ -1,26 +1,59 @@
 
 const body = document.querySelector('body')
-//define dimensions of grid
-const columns = 16;
-const rows = 16;
+const button = document.querySelector('button')
+
 
 //create parent grid
 const grid = document.createElement('div');
 grid.className= "grid";
 
-for (let i=0; i<columns; i++){
-    //create 16 columns
-    let column= document.createElement('div');
-    column.className= 'column';
-    for (let j=0; j<rows;j++){
-        //create 16 rows of divs in each column
-        let row=document.createElement('div');
-        row.className= 'row';
-        column.appendChild(row)
+function drawGrid(rows,columns){
+    //separate the grid using rows and columns for easy styling in css
+    for (let i=0; i<columns; i++){
+        let column= document.createElement('div');
+        column.className= 'column';
+        for (let j=0; j<rows;j++){
+            let row=document.createElement('div');
+            row.className= 'row';
+            column.appendChild(row)
+        }
+        grid.appendChild(column);
     }
-    //append all columns to parent grid
-    grid.appendChild(column);
+    body.appendChild(grid)
 }
 
-body.appendChild(grid)
-console.log("finished")
+function getRandomRgbNum(){
+    return Math.floor(Math.random()*255)
+}
+
+function hoverEffect(){
+    //hovering over a grid changes it to a completely random RGB value
+    const squares= document.querySelectorAll('.row');
+    squares.forEach((square)=>{
+    square.addEventListener('mouseover',()=>{
+        square.style.backgroundColor= `rgb(${getRandomRgbNum()},${getRandomRgbNum()},${getRandomRgbNum()})`
+    })
+})
+}
+
+//user should be able to set and adjust the size of their grid
+button.addEventListener('click',()=>{
+    gridSize=prompt('How many squares do you want per side for your sketchpad?')
+    //clear grid
+    grid.textContent=''
+    if (gridSize>100){
+        //A larger number of squares results in more computer resources being used, potentially causing delays, freezing, or crashing.
+        grid.textContent='Squares must be less than 100'
+    }else{
+        let columns=gridSize
+        let rows=gridSize
+        drawGrid(rows,columns)
+        hoverEffect()
+    }
+})
+
+
+
+
+
+
