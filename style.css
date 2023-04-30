@@ -1,0 +1,24 @@
+body{
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.grid{
+    background-color: bisque;
+    display: flex;
+    flex: none;
+    justify-content: center;
+    padding: 16px;
+    width: fit-content;
+}
+.row{
+    background-color: burlywood;
+    width: 50px;
+    height: 50px;
+    margin: 8px;
+}
+
