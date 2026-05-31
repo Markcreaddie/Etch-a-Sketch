@@ -1,15 +1,22 @@
 let container = document.querySelector(".container")
-let gridSize = 10
+let gridSize = 20
 
 
 for (let i = 0; i < gridSize; i++) {
-    let gridRow = document.createElement("div")
-    gridRow.className = "grid-row"
+    let Row = document.createElement("div")
+    Row.className = "grid-row"
     for (let j = 0; j < gridSize; j++) {
-        let gridCell = document.createElement("div")
-        gridCell.className = "grid-cell"
-        gridRow.appendChild(gridCell)
+        let Cell = document.createElement("div")
+        Cell.className = "grid-cell"
+        Row.appendChild(Cell)
 
     }
-    container.appendChild(gridRow)
+    container.appendChild(Row)
 }
+
+container.addEventListener("mouseover", (e) => {
+    source = e.target
+    if (source.classList.contains("grid-cell")) {
+        source.style.backgroundColor = "aquamarine"
+    }
+})
