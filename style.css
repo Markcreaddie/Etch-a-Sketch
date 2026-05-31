@@ -1,16 +1,25 @@
 * {
     text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.container {
+button,
+p {
+    margin: 4px;
+}
+
+.sketch-pad {
     width: 80vh;
     height: 80vh;
-    background-color: antiquewhite;
+    border-style: solid;
+    border-color: antiquewhite;
+    border-width: 4px;
+    background-color: white;
     display: flex;
     flex-direction: column;
     margin: auto;
-    padding: 2px;
 }
+
 
 .grid-row {
     display: flex;
@@ -18,12 +27,30 @@
 }
 
 .grid-cell {
-    background-color: white;
-    margin: 1px;
+    margin: 0.5px;
     flex: 1;
 }
 
-#message {
-    color: brown;
+p {
     white-space: pre;
+    font-size: 12px;
+}
+
+.pens {
+    width: 40vw;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
+
+.pens button {
+    width: 100px;
+}
+
+button {
+    background-color: antiquewhite;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 13px;
 }
