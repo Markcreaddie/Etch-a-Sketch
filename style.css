@@ -1,9 +1,15 @@
+* {
+    text-align: center;
+}
+
 .container {
-    width: 90vh;
-    height: 90vh;
+    width: 80vh;
+    height: 80vh;
     background-color: antiquewhite;
     display: flex;
     flex-direction: column;
+    margin: auto;
+    padding: 2px;
 }
 
 .grid-row {
@@ -15,4 +21,9 @@
     background-color: white;
     margin: 1px;
     flex: 1;
+}
+
+#message {
+    color: brown;
+    white-space: pre;
 }
